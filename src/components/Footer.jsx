@@ -22,10 +22,10 @@ export default function Footer() {
               our success with yours. Let's build something profitable together.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-accent-gold hover:text-yellow-400 transition-colors">
+              <a href="https://www.linkedin.com/in/jp-laczkovich/" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:text-yellow-400 transition-colors">
                 <FaLinkedin className="text-2xl" />
               </a>
-              <a href="#" className="text-accent-gold hover:text-yellow-400 transition-colors">
+              <a href="https://github.com/JP-Laczko" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:text-yellow-400 transition-colors">
                 <FaGithub className="text-2xl" />
               </a>
               <a href="mailto:contact@jpldev.com" className="text-accent-gold hover:text-yellow-400 transition-colors">

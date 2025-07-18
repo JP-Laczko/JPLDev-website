@@ -2,8 +2,8 @@ import { FaUser, FaHandshake, FaChartLine, FaTools } from 'react-icons/fa';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function About() {
-  const [leftSideRef, leftSideVisible] = useScrollAnimation(0.3);
-  const [rightSideRef, rightSideVisible] = useScrollAnimation(0.3);
+  const [leftSideRef, leftSideVisible] = useScrollAnimation(0.2);
+  const [rightSideRef, rightSideVisible] = useScrollAnimation(0.2);
   const [cardsRef, cardsVisible] = useScrollAnimation(0.2);
   return (
     <section id="about" className="section-enhanced" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
@@ -19,7 +19,7 @@ export default function About() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div ref={rightSideRef} className={rightSideVisible ? "animate-slideInRight" : "opacity-0"}>
+          <div ref={rightSideRef} className={rightSideVisible ? "animate-fadeInUp" : "opacity-0"}>
             <h2 className="section-heading text-white text-center mb-12">
               About <span className="bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] bg-clip-text text-transparent">JPLDev</span>
             </h2>
@@ -28,7 +28,7 @@ export default function About() {
               {/* Profile Picture */}
               <div className="flex-shrink-0" style={{ width: '150px', height: '150px' }}>
                 <img 
-                  src="http://localhost:5174/src/assets/images/ProfileImage.jpg"
+                  src="/profile.jpg"
                   alt="JP Laczkovich - JPLDev Founder"
                   style={{ 
                     width: '150px', 

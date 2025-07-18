@@ -22,31 +22,29 @@ export default function Hero() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fadeInUp">
-            <h1 className="text-white mb-6 font-bold leading-tight">
-              <span className="block text-5xl lg:text-7xl">Full Stack</span>
-              <span className="block text-5xl lg:text-7xl bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] bg-clip-text text-transparent">Development</span>
-              <span className="block text-2xl lg:text-3xl font-normal text-gray-300 mt-4">That Pays for Itself</span>
+          <div className="animate-fadeInUp text-center lg:text-left">
+            <h1 className="text-white font-bold leading-tight" style={{ marginBottom: '48px' }}>
+              <span className="block text-3xl lg:text-4xl xl:text-5xl" style={{ background: 'linear-gradient(45deg, #1e40af, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: '#1e40af', fontWeight: 'bold', marginBottom: '16px' }}>We build real, powerful, custom applications</span>
+              <span className="block font-normal" style={{ fontSize: '22px', color: '#64748b', paddingTop: '16px' }}>— not the kind you get from AI or web builders.</span>
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed animate-slideInLeft delay-200">
-              Get a professional, custom-built website with lower upfront costs. 
-              I partner with your business through a revenue-sharing model that aligns my success with yours.
+            <p style={{ fontSize: '24px', color: '#374151', fontWeight: '500', marginBottom: '40px', lineHeight: '1.5' }}>
+              JPLDev takes the stress out of managing everything — so you can focus on growing your business.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-slideInLeft delay-300">
               <button 
-                onClick={scrollToContact}
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-primary flex items-center justify-center group"
               >
-                Start Your Project 
+                View Portfolio
                 <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               <button 
-                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={scrollToContact}
                 className="btn-secondary"
               >
-                View Portfolio
+                Start Your Project
               </button>
             </div>
 
@@ -86,7 +84,7 @@ export default function Hero() {
               <div className="relative z-10">
                 <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-lg bg-gradient-to-br from-white/10 to-white/5">
                   <img 
-                    src="http://localhost:5174/src/assets/images/ProfileImage.jpg"
+                    src="/profile.jpg"
                     alt="JPLDev Professional Profile"
                     className="w-full h-full object-cover"
                   />

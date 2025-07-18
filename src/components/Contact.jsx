@@ -33,14 +33,14 @@ export default function Contact() {
         <div className="flex justify-center">
           <div className="max-w-4xl w-full">
             {/* Main Contact Cards */}
-            <div ref={cardsRef} className={`grid md:grid-cols-2 gap-8 mb-12 ${cardsVisible ? "" : "opacity-0"}`}>
+            <div ref={cardsRef} className={`grid md:grid-cols-2 gap-8 ${cardsVisible ? "" : "opacity-0"}`}>
               {/* Email Card */}
               <div className={`relative overflow-hidden group ${cardsVisible ? "animate-slideInLeft delay-200" : ""}`}>
                 {/* Enhanced Background with Purple/Orange Gradients */}
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to bottom right, #ca8a04, #ea580c, #7c3aed)' }}></div>
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to right, rgba(234, 88, 12, 0.6), rgba(0, 0, 0, 0.3), rgba(124, 58, 237, 0.6))' }}></div>
                 
-                <div className="relative card border-4" style={{ borderColor: 'rgba(255, 255, 255, 0.5)' }}>
+                <div className="relative card border-4" style={{ borderColor: 'rgba(255, 255, 255, 0.5)', background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(147, 51, 234, 0.9))', backdropFilter: 'blur(10px)' }}>
                   <div className="text-center">
                     <div className="w-20 h-20 bg-gradient-to-br from-[var(--accent-gold)] to-[var(--light-gold)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
                       <FaEnvelope className="text-white text-2xl" />
@@ -66,7 +66,7 @@ export default function Contact() {
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to bottom right, #16a34a, #059669, #7c3aed)' }}></div>
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to right, rgba(5, 150, 105, 0.6), rgba(0, 0, 0, 0.3), rgba(124, 58, 237, 0.6))' }}></div>
                 
-                <div className="relative card border-4" style={{ borderColor: 'rgba(255, 255, 255, 0.5)' }}>
+                <div className="relative card border-4" style={{ borderColor: 'rgba(255, 255, 255, 0.5)', background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(59, 130, 246, 0.9))', backdropFilter: 'blur(10px)' }}>
                   <div className="text-center">
                     <div className="w-20 h-20 bg-gradient-to-br from-[var(--accent-blue)] to-[var(--light-blue)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
                       <FaSms className="text-white text-2xl" />
@@ -88,14 +88,14 @@ export default function Contact() {
             </div>
 
             {/* Quick Contact Options */}
-            <div className="text-center animate-scaleIn delay-400 mt-16">
+            <div className="text-center animate-scaleIn delay-400" style={{ marginBottom: '40px' }}>
               <div className="relative overflow-hidden">
                 {/* Multi-layer Background Effects with Purple/Orange/Green */}
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to right, #ca8a04, #ea580c, #7c3aed)' }}></div>
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to bottom right, rgba(234, 88, 12, 0.4), rgba(124, 58, 237, 0.5), rgba(22, 163, 74, 0.4))' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-transparent rounded-3xl"></div>
                 
-                <div className="relative card p-8 border-4 border-[var(--accent-gold)]/50">
+                <div className="relative card p-8 border-4 border-[var(--accent-gold)]/50" style={{ background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.9), rgba(59, 130, 246, 0.9))', backdropFilter: 'blur(10px)' }}>
                   <h3 className="text-4xl font-black mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Prefer Quick Links?</h3>
                   <div className="flex justify-center gap-8">
                     <a 
@@ -124,14 +124,18 @@ export default function Contact() {
               <h4 className="text-2xl font-semibold mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Connect With Me</h4>
               <div className="flex justify-center space-x-8">
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/jp-laczkovich/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-16 h-16 backdrop-blur-sm border border-white/20 rounded-3xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-xl hover:shadow-2xl"
                   style={{ background: 'linear-gradient(to bottom right, #ca8a04, #ea580c)' }}
                 >
                   <FaLinkedin className="text-2xl" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://github.com/JP-Laczko" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-16 h-16 backdrop-blur-sm border border-white/20 rounded-3xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-xl hover:shadow-2xl"
                   style={{ background: 'linear-gradient(to bottom right, #16a34a, #7c3aed)' }}
                 >
