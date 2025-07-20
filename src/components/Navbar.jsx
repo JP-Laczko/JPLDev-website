@@ -1,12 +1,21 @@
-import { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React from 'react';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setIsOpen(false);
+    if (sectionId === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const elementPosition = element.offsetTop;
+        const offsetPosition = elementPosition - 100; // Offset by 100px to show full title
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
   };
 
   return (
@@ -15,113 +24,50 @@ export default function Navbar() {
       width: '100%',
       zIndex: 50,
       background: 'linear-gradient(to right, #1e40af, #3b82f6, #1e40af)',
-      padding: '8px 0'
+      padding: '16px 0',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     }}>
       
-      {/* Logo - Top Left */}
+      {/* Centered Navigation Tabs */}
       <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '16px',
-        transform: 'translateY(-50%)'
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+        padding: '0 24px',
+        maxWidth: '100%',
+        overflowX: 'auto',
+        scrollbarWidth: 'none',
+        msOverflowStyle: 'none'
       }}>
-        <img 
-          src="/JPLDevfavicon.png" 
-          alt="JPLDev Logo" 
-          style={{ 
-            height: '50px', 
-            width: 'auto'
-          }} 
-        />
+        <button onClick={() => scrollToSection('home')} style={navTabStyle}>Home</button>
+        <button onClick={() => scrollToSection('about')} style={navTabStyle}>About</button>
+        <button onClick={() => scrollToSection('why-choose-jpldev')} style={navTabStyle}>Why JPLDev</button>
+        <button onClick={() => scrollToSection('why-fullstack')} style={navTabStyle}>Full Stack vs Builders</button>
+        <button onClick={() => scrollToSection('portfolio')} style={navTabStyle}>Portfolio</button>
+        <button onClick={() => scrollToSection('contact')} style={{
+          ...navTabStyle,
+          backgroundColor: '#facc15',
+          color: 'black',
+          fontWeight: 'bold'
+        }}>Contact</button>
       </div>
-
-      {/* Centered Content */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ textAlign: 'center' }}>
-          <h1 style={{
-            fontSize: '18px',
-            fontWeight: 'bold',
-            color: '#facc15',
-            margin: '0 0 2px 0'
-          }}>
-            JPLDev
-          </h1>
-          <p style={{
-            fontSize: '14px',
-            color: '#fde047',
-            margin: '0'
-          }}>
-            Full Stack Development
-          </p>
-        </div>
-      </div>
-      
-      {/* Yellow Menu Button - Top Right */}
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        right: '16px',
-        transform: 'translateY(-50%)'
-      }}>
-        <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          style={{
-            padding: '8px',
-            borderRadius: '8px',
-            backgroundColor: '#facc15',
-            color: 'black',
-            border: 'none',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => e.target.style.backgroundColor = '#fde047'}
-          onMouseLeave={(e) => e.target.style.backgroundColor = '#facc15'}
-        >
-          {isOpen ? <FaTimes size={16} /> : <FaBars size={16} />}
-        </button>
-      </div>
-
-      {/* Dropdown Menu */}
-      {isOpen && (
-        <div style={{
-          position: 'absolute',
-          top: '100%',
-          right: '16px',
-          backgroundColor: 'rgba(30, 58, 138, 0.95)',
-          borderRadius: '8px',
-          padding: '8px',
-          minWidth: '200px',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-          zIndex: 40
-        }}>
-          <button onClick={() => scrollToSection('home')} style={dropdownItemStyle}>Home</button>
-          <button onClick={() => scrollToSection('about')} style={dropdownItemStyle}>About</button>
-          <button onClick={() => scrollToSection('why-choose-jpldev')} style={dropdownItemStyle}>Why JPLDev</button>
-          <button onClick={() => scrollToSection('why-fullstack')} style={dropdownItemStyle}>Full Stack vs Builders</button>
-          <button onClick={() => scrollToSection('portfolio')} style={dropdownItemStyle}>Portfolio</button>
-          <button onClick={() => scrollToSection('contact')} style={{
-            ...dropdownItemStyle,
-            backgroundColor: '#facc15',
-            color: 'black',
-            borderRadius: '4px',
-            marginTop: '4px'
-          }}>Contact</button>
-        </div>
-      )}
     </nav>
   );
 }
 
-const dropdownItemStyle = {
-  display: 'block',
-  width: '100%',
+const navTabStyle = {
   color: '#fde047',
   fontSize: '16px',
-  padding: '8px 12px',
-  margin: '2px 0',
+  padding: '12px 18px',
   backgroundColor: 'transparent',
   border: 'none',
   cursor: 'pointer',
-  textAlign: 'left',
-  borderRadius: '4px'
+  borderRadius: '8px',
+  transition: 'all 0.3s ease',
+  whiteSpace: 'nowrap',
+  minWidth: 'fit-content',
+  textAlign: 'center',
+  fontWeight: '500'
 };

@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaSms, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Contact() {
@@ -21,21 +21,28 @@ export default function Contact() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerRef} className={`text-center mb-16 ${headerVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Let's Build Something <span className="bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] bg-clip-text text-transparent">Amazing Together</span>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent" style={{
+            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
+            animation: 'shimmerGlow 2.5s ease-in-out infinite',
+            WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+          }}>
+            Let's Build Something Amazing Together
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-4xl mx-auto leading-relaxed px-8 sm:px-12 lg:px-16" style={{ color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
             Ready to partner with a developer who's invested in your success? 
-            Shoot me a text or email to discuss your project!
+            Send me an email to discuss your project!
           </p>
+          
+          {/* Decorative Header Line */}
+          <div className="h-1 w-20 bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] rounded-full mx-auto mt-6"></div>
         </div>
 
         <div className="flex justify-center">
           <div className="max-w-4xl w-full">
-            {/* Main Contact Cards */}
-            <div ref={cardsRef} className={`grid md:grid-cols-2 gap-8 ${cardsVisible ? "" : "opacity-0"}`}>
+            {/* Main Contact Card */}
+            <div ref={cardsRef} className={`flex justify-center ${cardsVisible ? "" : "opacity-0"}`}>
               {/* Email Card */}
-              <div className={`relative overflow-hidden group ${cardsVisible ? "animate-slideInLeft delay-200" : ""}`}>
+              <div className={`max-w-2xl w-full relative overflow-hidden group ${cardsVisible ? "animate-slideInUp delay-200" : ""}`}>
                 {/* Enhanced Background with Purple/Orange Gradients */}
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to bottom right, #ca8a04, #ea580c, #7c3aed)' }}></div>
                 <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to right, rgba(234, 88, 12, 0.6), rgba(0, 0, 0, 0.3), rgba(124, 58, 237, 0.6))' }}></div>
@@ -47,40 +54,14 @@ export default function Contact() {
                     </div>
                     <h3 className="text-3xl font-black mb-4" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Email Me</h3>
                     <a 
-                      href="mailto:jplaczkovichdev@gmail.com"
+                      href="mailto:jp.jpldev@gmail.com"
                       className="text-[var(--accent-gold)] text-2xl font-black hover:text-[var(--light-gold)] transition-colors block mb-4"
                       style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}
                     >
-                      jplaczkovichdev@gmail.com
+                      jp.jpldev@gmail.com
                     </a>
                     <p className="text-lg font-semibold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                       Send me an email with your project details and I'll get back to you within 48 hours.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Text Card */}
-              <div className={`relative overflow-hidden group ${cardsVisible ? "animate-slideInRight delay-200" : ""}`}>
-                {/* Enhanced Background with Green/Purple Gradients */}
-                <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to bottom right, #16a34a, #059669, #7c3aed)' }}></div>
-                <div className="absolute inset-0 rounded-3xl" style={{ background: 'linear-gradient(to right, rgba(5, 150, 105, 0.6), rgba(0, 0, 0, 0.3), rgba(124, 58, 237, 0.6))' }}></div>
-                
-                <div className="relative card border-4" style={{ borderColor: 'rgba(255, 255, 255, 0.5)', background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(59, 130, 246, 0.9))', backdropFilter: 'blur(10px)' }}>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[var(--accent-blue)] to-[var(--light-blue)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                      <FaSms className="text-white text-2xl" />
-                    </div>
-                    <h3 className="text-3xl font-black mb-4" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Text Me</h3>
-                    <a 
-                      href="sms:703-936-1602"
-                      className="text-[var(--accent-gold)] text-2xl font-black hover:text-[var(--light-gold)] transition-colors block mb-4"
-                      style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}
-                    >
-                      (703) 936-1602
-                    </a>
-                    <p className="text-lg font-semibold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                      Shoot me a text to discuss your project ideas and timeline.
                     </p>
                   </div>
                 </div>
@@ -96,23 +77,15 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-transparent rounded-3xl"></div>
                 
                 <div className="relative card p-8 border-4 border-[var(--accent-gold)]/50" style={{ background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.9), rgba(59, 130, 246, 0.9))', backdropFilter: 'blur(10px)' }}>
-                  <h3 className="text-4xl font-black mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Prefer Quick Links?</h3>
-                  <div className="flex justify-center gap-8">
+                  <h3 className="text-4xl font-black mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Ready to Get Started?</h3>
+                  <div className="flex justify-center">
                     <a 
-                      href="sms:703-936-1602"
-                      className="btn-primary flex items-center group text-xl px-10 py-6 font-black"
-                      style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}
-                    >
-                      <FaSms className="mr-3 group-hover:animate-pulse text-2xl" />
-                      Send Text
-                    </a>
-                    <a 
-                      href="mailto:jplaczkovichdev@gmail.com"
-                      className="btn-secondary flex items-center group text-xl px-10 py-6 font-black"
+                      href="mailto:jp.jpldev@gmail.com"
+                      className="btn-primary flex items-center group text-xl px-12 py-6 font-black"
                       style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}
                     >
                       <FaEnvelope className="mr-3 group-hover:animate-pulse text-2xl" />
-                      Send Email
+                      Send Email Now
                     </a>
                   </div>
                 </div>
@@ -122,13 +95,22 @@ export default function Contact() {
             {/* Social Links */}
             <div className="text-center mt-16 animate-fadeInUp delay-500 mb-20">
               <h4 className="text-2xl font-semibold mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Connect With Me</h4>
-              <div className="flex justify-center space-x-8">
+              <div className="flex justify-center space-x-6">
                 <a 
                   href="https://www.linkedin.com/in/jp-laczkovich/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-16 h-16 backdrop-blur-sm border border-white/20 rounded-3xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-xl hover:shadow-2xl"
                   style={{ background: 'linear-gradient(to bottom right, #ca8a04, #ea580c)' }}
+                >
+                  <FaLinkedin className="text-2xl" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/jpldev-llc/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-16 h-16 backdrop-blur-sm border border-white/20 rounded-3xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                  style={{ background: 'linear-gradient(to bottom right, #3b82f6, #1e40af)' }}
                 >
                   <FaLinkedin className="text-2xl" />
                 </a>

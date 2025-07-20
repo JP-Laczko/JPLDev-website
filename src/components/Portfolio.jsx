@@ -29,7 +29,7 @@ export default function Portfolio() {
       title: "DCD Labor",
       description: "A professional labor services website showcasing company capabilities and services. Features modern design and comprehensive service presentations.",
       url: "https://admirable-croissant-c6f255.netlify.app/",
-      technologies: ["React", "Tailwind", "Vite", "CSS", "JavaScript", "Netlify"],
+      technologies: ["React", "Tailwind", "Vite", "CSS", "JavaScript", "MongoDB", "Netlify"],
       features: ["Service Showcase", "Professional Design", "Responsive Layout", "Fast Loading", "Modern UI/UX"],
       link: "https://admirable-croissant-c6f255.netlify.app/",
       status: "Live"
@@ -51,8 +51,12 @@ export default function Portfolio() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerRef} className={`text-center mb-20 ${headerVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="section-heading text-white">
-            Featured <span className="bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] bg-clip-text text-transparent">Projects</span>
+          <h2 className="section-heading bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent" style={{
+            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
+            animation: 'shimmerGlow 2.5s ease-in-out infinite',
+            WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+          }}>
+            Featured Projects
           </h2>
           <p className="section-subheading text-gray-300 max-w-4xl mx-auto">
             See the results I deliver. These live websites showcase the revenue-driving, 
@@ -141,7 +145,17 @@ export default function Portfolio() {
                   </h4>
                   <div className="grid grid-cols-1 gap-4">
                     {project.features.map((feature, index) => {
-                      const icons = ["🔒", "👥", "📝", "📅", "👨‍💼", "💳", "📱"];
+                      // Project-specific icon mappings
+                      const getProjectIcons = (projectId) => {
+                        if (projectId === 1) { // FOS Sports Academy
+                          return ["🔒", "👥", "📝", "📅", "👨‍💼", "💳", "📱"];
+                        } else if (projectId === 2) { // DCD Labor
+                          return ["🏢", "🎨", "📱", "⚡", "✨"];
+                        }
+                        return ["🔒", "👥", "📝", "📅", "👨‍💼", "💳", "📱"];
+                      };
+                      
+                      const icons = getProjectIcons(project.id);
                       const gradients = [
                         "from-blue-500 to-cyan-500",
                         "from-purple-500 to-pink-500",

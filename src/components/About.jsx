@@ -20,8 +20,12 @@ export default function About() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div ref={rightSideRef} className={rightSideVisible ? "animate-fadeInUp" : "opacity-0"}>
-            <h2 className="section-heading text-white text-center mb-12">
-              About <span className="bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] bg-clip-text text-transparent">JPLDev</span>
+            <h2 className="section-heading bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent text-center mb-12" style={{
+              textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
+              animation: 'shimmerGlow 2.5s ease-in-out infinite',
+              WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+            }}>
+              About JPLDev
             </h2>
             
             <div className="flex flex-col items-center justify-center gap-8 mb-8 px-12">

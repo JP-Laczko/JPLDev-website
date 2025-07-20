@@ -44,10 +44,14 @@ export default function WhyChooseJPLDev() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerRef} className={`text-center mb-20 ${headerVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="section-heading text-white">
-            Why Choose <span className="bg-gradient-to-r from-[var(--accent-gold)] to-[var(--light-gold)] bg-clip-text text-transparent">JPLDev</span>
+          <h2 className="section-heading bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent" style={{
+            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
+            animation: 'shimmerGlow 2.5s ease-in-out infinite',
+            WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+          }}>
+            Why Choose JPLDev
           </h2>
-          <p className="section-subheading text-gray-300 max-w-4xl mx-auto">
+          <p className="section-subheading text-gray-300 max-w-4xl mx-auto" style={{ padding: '0 20px' }}>
             You could hire any developer, but here's what makes JPLDev different and why 
             businesses choose to partner with me for their web development needs.
           </p>
@@ -94,8 +98,11 @@ export default function WhyChooseJPLDev() {
               </p>
               <button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-[var(--dark-bg)] text-white hover:text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-[var(--primary-blue)] transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
-                style={{ color: 'white' }}
+                className="text-white hover:text-white px-16 py-6 rounded-2xl font-bold text-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+                style={{ 
+                  background: 'linear-gradient(135deg, #3b82f6, #1e40af, #1e3a8a)',
+                  color: 'white'
+                }}
               >
                 Start Your Partnership
               </button>

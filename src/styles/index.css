@@ -98,6 +98,18 @@
   }
 }
 
+@keyframes shimmerGlow {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(100, 150, 255, 0.3)) drop-shadow(0 0 15px rgba(100, 150, 255, 0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(100, 150, 255, 0.6)) drop-shadow(0 0 25px rgba(100, 150, 255, 0.35));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(100, 150, 255, 0.3)) drop-shadow(0 0 15px rgba(100, 150, 255, 0.15));
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -404,4 +416,122 @@ h3 {
 
 .floating-shape:nth-child(3) {
   animation-delay: -4s;
+}
+
+/* Mobile Responsive Styles for Hero Title Section */
+@media (max-width: 768px) {
+  .hero-title-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+    text-align: center !important;
+    margin-top: 80px !important;
+  }
+  
+  .hero-logo {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 30px !important;
+  }
+  
+  .hero-text-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .hero-text-container h1 {
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .hero-main-text {
+    font-size: 36px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    position: relative !important;
+    top: -20px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px !important;
+    text-align: center !important;
+    margin-top: 20px !important;
+    position: relative !important;
+  }
+  
+  .hero-dark-background {
+    height: 150vh !important;
+  }
+  
+  .hero-main-text {
+    padding: 0 20px !important;
+  }
+}
+
+/* Tablet and narrow screen width adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-dark-background {
+    height: 130vh !important;
+  }
+}
+
+/* Mobile navbar fixes */
+@media (max-width: 768px) {
+  nav {
+    padding: 12px 0 !important;
+  }
+  
+  nav div {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 0 16px !important;
+    max-width: 100% !important;
+  }
+  
+  nav button {
+    font-size: 13px !important;
+    padding: 8px 12px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    min-width: fit-content !important;
+  }
+}
+
+/* Mobile table text fix for WhyFullStack section */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+    padding: 0 10px !important;
+    text-align: center !important;
+  }
+}
+
+/* Desktop table header text for WhyFullStack section */
+@media (min-width: 769px) {
+  .whyfullstack-table h3 {
+    font-size: 1.6rem !important;
+    padding: 8px !important;
+  }
+}
+
+/* Smaller screen adjustments for hero layout */
+@media (max-width: 900px) and (min-width: 769px) {
+  .hero-title-grid {
+    gap: 40px !important;
+  }
+  
+  .hero-text-container {
+    padding-left: 20px !important;
+  }
 }
