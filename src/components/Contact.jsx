@@ -21,16 +21,16 @@ export default function Contact() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerRef} className={`text-center mb-16 ${headerVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent" style={{
-            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
-            animation: 'shimmerGlow 2.5s ease-in-out infinite',
-            WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+          <h2 className="text-5xl font-bold mb-6" style={{
+            color: 'white',
+            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(59, 130, 246, 0.8)',
+            animation: 'shimmerGlow 2.5s ease-in-out infinite'
           }}>
             Let's Build Something Amazing Together
           </h2>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed px-8 sm:px-12 lg:px-16" style={{ color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
             Ready to partner with a developer who's invested in your success? 
-            Send me an email to discuss your project!
+            Send us an email to discuss your project!
           </p>
           
           {/* Decorative Header Line */}
@@ -52,7 +52,7 @@ export default function Contact() {
                     <div className="w-20 h-20 bg-gradient-to-br from-[var(--accent-gold)] to-[var(--light-gold)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
                       <FaEnvelope className="text-white text-2xl" />
                     </div>
-                    <h3 className="text-3xl font-black mb-4" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Email Me</h3>
+                    <h3 className="text-3xl font-black mb-4" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Email Us</h3>
                     <a 
                       href="mailto:jp.jpldev@gmail.com"
                       className="text-[var(--accent-gold)] text-2xl font-black hover:text-[var(--light-gold)] transition-colors block mb-4"
@@ -61,7 +61,7 @@ export default function Contact() {
                       jp.jpldev@gmail.com
                     </a>
                     <p className="text-lg font-semibold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                      Send me an email with your project details and I'll get back to you within 48 hours.
+                      Send us an email with your project details and we'll get back to you within 48 hours.
                     </p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function Contact() {
 
             {/* Social Links */}
             <div className="text-center mt-16 animate-fadeInUp delay-500 mb-20">
-              <h4 className="text-2xl font-semibold mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Connect With Me</h4>
+              <h4 className="text-2xl font-semibold mb-8" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>Connect With Us</h4>
               <div className="flex justify-center space-x-6">
                 <a 
                   href="https://www.linkedin.com/in/jp-laczkovich/" 

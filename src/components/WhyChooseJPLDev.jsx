@@ -10,22 +10,22 @@ export default function WhyChooseJPLDev() {
     {
       icon: <FaCogs className="text-4xl text-accent-gold" />,
       title: "Full Stack Expertise",
-      description: "I handle everything from frontend user experience to backend databases and server management."
+      description: "We handle everything from frontend user experience to backend databases and server management."
     },
     {
       icon: <FaRocket className="text-4xl text-accent-gold" />,
       title: "Performance Focused",
-      description: "Every site I build is optimized for speed, SEO, and conversions to maximize your revenue."
+      description: "Every site we build is optimized for speed, SEO, and conversions to maximize your revenue."
     },
     {
       icon: <FaHandshake className="text-4xl text-accent-gold" />,
       title: "Aligned Incentives",
-      description: "My revenue-sharing model means I'm invested in your long-term success, not just project completion."
+      description: "Our revenue-sharing model means we're invested in your long-term success, not just project completion."
     },
     {
       icon: <FaChartLine className="text-4xl text-accent-gold" />,
       title: "Growth Partnership",
-      description: "I provide ongoing optimization and support because your growth directly impacts my success."
+      description: "We provide ongoing optimization and support because your growth directly impacts our success."
     }
   ];
 
@@ -44,16 +44,20 @@ export default function WhyChooseJPLDev() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headerRef} className={`text-center mb-20 ${headerVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="section-heading bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent" style={{
-            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
-            animation: 'shimmerGlow 2.5s ease-in-out infinite',
-            WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+          <h2 className="section-heading" style={{
+            color: 'white',
+            textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(59, 130, 246, 0.8)',
+            animation: 'shimmerGlow 2.5s ease-in-out infinite'
           }}>
             Why Choose JPLDev
           </h2>
-          <p className="section-subheading text-gray-300 max-w-4xl mx-auto" style={{ padding: '0 20px' }}>
+          <p className="section-subheading max-w-4xl mx-auto" style={{ 
+            padding: '0 20px',
+            color: '#e2e8f0',
+            textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+          }}>
             You could hire any developer, but here's what makes JPLDev different and why 
-            businesses choose to partner with me for their web development needs.
+            businesses choose to partner with us for their web development needs.
           </p>
         </div>
 
@@ -92,8 +96,8 @@ export default function WhyChooseJPLDev() {
             <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/10 to-white/5 rounded-3xl"></div>
             
             <div className="relative card p-8 border-4 border-white/30">
-              <h3 className="text-4xl font-bold text-[var(--dark-bg)] mb-4">Ready to Partner with JPLDev?</h3>
-              <p className="text-xl text-[var(--dark-bg)]/80 mb-8 leading-relaxed">
+              <h3 className="text-4xl font-bold mb-4" style={{ color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>Ready to Partner with JPLDev?</h3>
+              <p className="text-xl mb-8 leading-relaxed" style={{ color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Let's build something that drives real revenue for your business.
               </p>
               <button 

@@ -8,7 +8,9 @@ export default function Navbar() {
       const element = document.getElementById(sectionId);
       if (element) {
         const elementPosition = element.offsetTop;
-        const offsetPosition = elementPosition - 100; // Offset by 100px to show full title
+        // Larger offset for mobile to account for navbar height and spacing
+        const isMobile = window.innerWidth <= 768;
+        const offsetPosition = elementPosition - (isMobile ? 120 : 100);
         
         window.scrollTo({
           top: offsetPosition,

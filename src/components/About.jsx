@@ -20,10 +20,10 @@ export default function About() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div ref={rightSideRef} className={rightSideVisible ? "animate-fadeInUp" : "opacity-0"}>
-            <h2 className="section-heading bg-gradient-to-r from-[var(--primary-blue)] to-[var(--secondary-blue)] bg-clip-text text-transparent text-center mb-12" style={{
-              textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(100, 150, 255, 0.08)',
-              animation: 'shimmerGlow 2.5s ease-in-out infinite',
-              WebkitTextStroke: '0.5px rgba(255, 255, 255, 0.6)'
+            <h2 className="section-heading text-center mb-12" style={{
+              color: 'white',
+              textShadow: '0 6px 12px rgba(0,0,0,0.4), 0 0 15px rgba(59, 130, 246, 0.8)',
+              animation: 'shimmerGlow 2.5s ease-in-out infinite'
             }}>
               About JPLDev
             </h2>
@@ -48,7 +48,7 @@ export default function About() {
               {/* Text Content */}
               <div className="text-center">
                 <p className="text-3xl font-bold text-white animate-fadeInUp delay-200 mb-2">
-                  Hi, I'm JP Laczkovich, founder of JPLDev.
+                  Hi, I'm JP Laczkovich, the President of JPLDev.
                 </p>
               </div>
             </div>
@@ -65,11 +65,11 @@ export default function About() {
               >
                 <h3 className="text-4xl font-black mb-6 flex items-center justify-center" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
                   <span className="w-4 h-4 bg-white rounded-full mr-4 animate-pulse"></span>
-                  My Mission
+                  Our Mission
                   <span className="w-4 h-4 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-2xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  I started this company with one mission: to give businesses of all sizes access to <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>powerful and professional full-stack web development</span> — without the massive upfront cost.
+                  We started this company with one mission: to give businesses of all sizes access to <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>powerful and professional full-stack web development</span> — without the massive upfront cost.
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function About() {
                   <span className="w-4 h-4 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-2xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  A great website shouldn't just look good — <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>it should work for you</span>. It should automate your processes, convert visitors into customers, and free up your time so you can focus on running and growing your business. <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>That's where I come in.</span>
+                  A great website shouldn't just look good — <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>it should work for you</span>. It should automate your processes, convert visitors into customers, and free up your time so you can focus on running and growing your business. <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>That's where we come in.</span>
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function About() {
                   <span className="w-5 h-5 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-3xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  Instead of charging thousands before you see results, I offer a <span className="font-black text-4xl" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>revenue-sharing model</span>. I build and maintain a custom, results-driven web platform tailored to your business — and <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>I only succeed when you do</span>. No bloated budgets. No barriers to entry. Just scalable, smart software that grows with you.
+                  Instead of charging thousands before you see results, we offer a <span className="font-black text-4xl" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>revenue-sharing model</span>. We build and maintain a custom, results-driven web platform tailored to your business — and <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>we only succeed when you do</span>. No bloated budgets. No barriers to entry. Just scalable, smart software that grows with you.
                 </p>
               </div>
             </div>
@@ -132,49 +132,6 @@ export default function About() {
               </div>
             </div>
 
-            <div ref={cardsRef} className={`grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 ${cardsVisible ? "" : "opacity-0"}`}>
-              <div className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-500 ${cardsVisible ? "animate-bounceIn delay-400" : ""}`}>
-                {/* Enhanced Background with Gradients */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-400/15 to-purple-500/10 rounded-3xl"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-3xl"></div>
-                
-                <div className="relative card text-center p-8 border-3 border-gray-200/50">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[var(--primary-blue)] to-[var(--secondary-blue)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:animate-glow transition-transform duration-300">
-                    <FaHandshake className="text-white text-3xl" />
-                  </div>
-                  <h3 className="font-bold text-[var(--dark-bg)] mb-3 text-xl">Partnership Model</h3>
-                  <p className="text-base text-[var(--medium-gray)] leading-relaxed">We succeed together</p>
-                </div>
-              </div>
-              
-              <div className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-500 ${cardsVisible ? "animate-bounceIn delay-500" : ""}`}>
-                {/* Enhanced Background with Gradients */}
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/10 via-amber-400/15 to-orange-400/10 rounded-3xl"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-3xl"></div>
-                
-                <div className="relative card text-center p-8 border-3 border-gray-200/50">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[var(--accent-gold)] to-[var(--light-gold)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:animate-glow transition-transform duration-300">
-                    <FaChartLine className="text-white text-3xl" />
-                  </div>
-                  <h3 className="font-bold text-[var(--dark-bg)] mb-3 text-xl">Growth Focused</h3>
-                  <p className="text-base text-[var(--medium-gray)] leading-relaxed">Built for performance</p>
-                </div>
-              </div>
-              
-              <div className={`relative overflow-hidden group hover:shadow-2xl transition-all duration-500 ${cardsVisible ? "animate-bounceIn delay-600" : ""}`}>
-                {/* Enhanced Background with Gradients */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-blue-400/15 to-indigo-400/10 rounded-3xl"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-3xl"></div>
-                
-                <div className="relative card text-center p-8 border-3 border-gray-200/50">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[var(--accent-blue)] to-[var(--light-blue)] rounded-3xl mx-auto mb-6 flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:animate-glow transition-transform duration-300">
-                    <FaTools className="text-white text-3xl" />
-                  </div>
-                  <h3 className="font-bold text-[var(--dark-bg)] mb-3 text-xl">Full Stack</h3>
-                  <p className="text-base text-[var(--medium-gray)] leading-relaxed">Complete solutions</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
