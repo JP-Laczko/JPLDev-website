@@ -3,8 +3,8 @@ import { FaTimesCircle, FaCheckCircle, FaPuzzlePiece, FaRocket, FaCogs, FaChartL
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function WhyFullStack() {
-  const [headerRef, headerVisible] = useScrollAnimation(0.3);
-  const [tableRef, tableVisible] = useScrollAnimation(0.2);
+  const [headerRef, headerVisible] = useScrollAnimation(0.1);
+  const [tableRef, tableVisible] = useScrollAnimation(0.05);
   const comparisons = [
     {
       category: "Design & Customization",
