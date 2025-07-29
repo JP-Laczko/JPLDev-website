@@ -57,7 +57,7 @@ export default function WhyChooseJPLDev() {
             textShadow: '0 2px 4px rgba(0,0,0,0.8)'
           }}>
             You could hire any developer, but here's what makes JPLDev different and why 
-            businesses choose to partner with us for their web development needs.
+            businesses choose to partner with us for their development needs.
           </p>
         </div>
 

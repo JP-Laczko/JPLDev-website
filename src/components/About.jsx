@@ -69,7 +69,7 @@ export default function About() {
                   <span className="w-4 h-4 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-2xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  We started this company with one mission: to give businesses of all sizes access to <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>powerful and professional full-stack web development</span> — without the massive upfront cost.
+                  I started this company with one mission: to give businesses of all sizes access to <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>powerful and professional full-stack software development</span> — without the massive upfront cost.
                 </p>
               </div>
             </div>

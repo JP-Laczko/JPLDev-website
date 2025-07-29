@@ -8,6 +8,16 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: "DCD Labor",
+      description: "A professional labor services website showcasing company capabilities and services. Features modern design and comprehensive service presentations.",
+      url: "https://dcd-labor.vercel.app",
+      technologies: ["React", "Tailwind", "Vite", "CSS", "JavaScript", "MongoDB", "Vercel", "Resend", "Square"],
+      features: ["Customized Admin Management Dashboard", "Dynamic Scheduling & Availability", "Service Showcase", "Professional Design", "Responsive Layout", "Fast Loading", "Modern UI/UX", "Database Custom Logic", "Email Service"],
+      link: "https://dcd-labor.vercel.app",
+      status: "Live"
+    },
+    {
+      id: 2,
       title: "FOS Sports Academy",
       description: "A comprehensive sports academy website featuring programs, training schedules, and registration. Built with modern web technologies for optimal performance and user experience.",
       url: "https://fossportsacademy.com/",
@@ -25,16 +35,6 @@ export default function Portfolio() {
       ],
       link: "https://fossportsacademy.com/",
       embedLink: "https://fossportsacademy.com/?sport=baseball",
-      status: "Live"
-    },
-    {
-      id: 2,
-      title: "DCD Labor",
-      description: "A professional labor services website showcasing company capabilities and services. Features modern design and comprehensive service presentations.",
-      url: "https://dcd-labor.vercel.app",
-      technologies: ["React", "Tailwind", "Vite", "CSS", "JavaScript", "MongoDB", "Vercel", "Resend", "Square"],
-      features: ["Customized Admin Management Dashboard", "Service Showcase", "Professional Design", "Responsive Layout", "Fast Loading", "Modern UI/UX", "Database Custom Logic", "Email Service"],
-      link: "https://dcd-labor.vercel.app",
       status: "Live"
     }
   ];
@@ -65,7 +65,7 @@ export default function Portfolio() {
             color: '#e2e8f0',
             textShadow: '0 2px 4px rgba(0,0,0,0.8)'
           }}>
-            See the results we deliver. These live websites showcase the revenue-driving, 
+            See the results we deliver. These live applications showcase the revenue-driving, 
             custom solutions we build for businesses like yours.
           </p>
           
@@ -146,10 +146,10 @@ export default function Portfolio() {
                           {project.features.map((feature, featureIndex) => {
                             // Project-specific icon mappings
                             const getProjectIcons = (projectId) => {
-                              if (projectId === 1) { // FOS Sports Academy
+                              if (projectId === 1) { // DCD Labor
+                                return ["⚙️", "📅", "🏢", "🎨", "📱", "⚡", "✨", "🗄️", "📧"];
+                              } else if (projectId === 2) { // FOS Sports Academy
                                 return ["⚙️", "👥", "📝", "📅", "👨‍💼", "💳", "🗄️", "📧", "📱"];
-                              } else if (projectId === 2) { // DCD Labor
-                                return ["⚙️", "🏢", "🎨", "📱", "⚡", "✨", "🗄️", "📧"];
                               }
                               return ["⚙️", "👥", "📝", "📅", "👨‍💼", "💳", "🗄️", "📧", "📱"];
                             };
@@ -203,15 +203,15 @@ export default function Portfolio() {
                               width: '160px',
                               height: '160px',
                               background: project.id === 1 
-                                ? 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%)'  // Blue gradient for FOS
-                                : 'linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #86efac 100%)', // Green gradient for DCD
+                                ? 'linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #86efac 100%)' // Green gradient for DCD
+                                : 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%)',  // Blue gradient for FOS
                               borderRadius: '24px',
                               boxShadow: project.id === 1
-                                ? '0 12px 40px rgba(59, 130, 246, 0.2), 0 0 0 1px rgba(147, 197, 253, 0.1) inset'
-                                : '0 12px 40px rgba(34, 197, 94, 0.2), 0 0 0 1px rgba(134, 239, 172, 0.1) inset',
+                                ? '0 12px 40px rgba(34, 197, 94, 0.2), 0 0 0 1px rgba(134, 239, 172, 0.1) inset'
+                                : '0 12px 40px rgba(59, 130, 246, 0.2), 0 0 0 1px rgba(147, 197, 253, 0.1) inset',
                               border: project.id === 1 
-                                ? '4px solid #93c5fd'  // Blue border for FOS
-                                : '4px solid #86efac', // Green border for DCD
+                                ? '4px solid #86efac' // Green border for DCD
+                                : '4px solid #93c5fd',  // Blue border for FOS
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
@@ -221,7 +221,7 @@ export default function Portfolio() {
                             }}
                             className="group-hover:border-yellow-400 group-hover:scale-110 group-hover:shadow-2xl"
                           >
-                            {/* Animated Background - Blue for FOS, Green for DCD */}
+                            {/* Animated Background - Green for DCD, Blue for FOS */}
                             <div 
                               style={{
                                 position: 'absolute',
@@ -230,10 +230,10 @@ export default function Portfolio() {
                                 right: 0,
                                 bottom: 0,
                                 background: project.id === 1 
-                                  ? 'radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(147, 197, 253, 0.1) 0%, transparent 50%)'
-                                  : 'radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(74, 222, 128, 0.1) 0%, transparent 50%)',
+                                  ? 'radial-gradient(circle at 30% 30%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(74, 222, 128, 0.1) 0%, transparent 50%)'
+                                  : 'radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 70% 70%, rgba(147, 197, 253, 0.1) 0%, transparent 50%)',
                                 backgroundSize: '60% 60%, 40% 40%',
-                                animation: project.id === 1 ? 'blueWave 4s ease-in-out infinite' : 'greenWave 4s ease-in-out infinite',
+                                animation: project.id === 1 ? 'greenWave 4s ease-in-out infinite' : 'blueWave 4s ease-in-out infinite',
                                 zIndex: 1
                               }}
                             />
@@ -255,7 +255,7 @@ export default function Portfolio() {
                             
                             {/* Favicon Image */}
                             <img 
-                              src={project.id === 1 ? "/FOSFavicon.png" : "/DCDLaborFavicon.png"}
+                              src={project.id === 1 ? "/DCDLaborFavicon.png" : "/FOSFavicon.png"}
                               alt={`${project.title} favicon`}
                               style={{
                                 width: '80px',

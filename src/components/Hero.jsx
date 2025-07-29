@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="text-center min-h-screen flex flex-col justify-center">
           <div className="animate-fadeInUp">
             {/* Centered Text Layout */}
-            <div className="relative mb-20" style={{ marginTop: '40px' }}>
+            <div className="relative mb-20" style={{ marginTop: '20px' }}>
               <h1 style={{ 
                 fontWeight: 'bold', 
                 lineHeight: '1.2', 

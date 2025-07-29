@@ -18,7 +18,7 @@ export default function Footer() {
               <span className="text-accent-gold">JPL</span>Dev
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Full-stack web development with a revenue-sharing model that aligns 
+              Full-stack software development with a revenue-sharing model that aligns 
               our success with yours. Let's build something profitable together.
             </p>
             <div className="flex space-x-4">
