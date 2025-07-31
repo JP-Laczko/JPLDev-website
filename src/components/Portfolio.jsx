@@ -10,10 +10,10 @@ export default function Portfolio() {
       id: 1,
       title: "DCD Labor",
       description: "A professional labor services website showcasing company capabilities and services. Features modern design and comprehensive service presentations.",
-      url: "https://dcd-labor.vercel.app",
+      url: "https://dcdlabor.com",
       technologies: ["React", "Tailwind", "Vite", "CSS", "JavaScript", "MongoDB", "Vercel", "Resend", "Square"],
       features: ["Customized Admin Management Dashboard", "Dynamic Scheduling & Availability", "Service Showcase", "Professional Design", "Responsive Layout", "Fast Loading", "Modern UI/UX", "Database Custom Logic", "Email Service"],
-      link: "https://dcd-labor.vercel.app",
+      link: "https://dcdlabor.com",
       status: "Live"
     },
     {
