@@ -69,7 +69,7 @@ export default function About() {
                   <span className="w-4 h-4 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-2xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  I started this company with one mission: to give businesses of all sizes access to <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>powerful and professional full-stack software development</span> — without the massive upfront cost.
+                  I started this company with one mission: to give businesses of all sizes access to <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>powerful and professional full-stack software development</span> without the massive upfront cost.
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function About() {
                   <span className="w-4 h-4 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-2xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  A great website shouldn't just look good — <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>it should work for you</span>. It should automate your processes, convert visitors into customers, and free up your time so you can focus on running and growing your business. <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>That's where we come in.</span>
+                  A great website shouldn't just look good. <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>It should work for you</span>. It should automate your processes, convert visitors into customers, and free up your time so you can focus on running and growing your business. <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>That's where we come in.</span>
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function About() {
                   <span className="w-5 h-5 bg-white rounded-full ml-4 animate-pulse"></span>
                 </h3>
                 <p className="text-3xl leading-relaxed font-bold" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  Instead of charging thousands before you see results, we offer a <span className="font-black text-4xl" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>revenue-sharing model</span>. We build and maintain a custom, results-driven web platform tailored to your business — and <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>we only succeed when you do</span>. No bloated budgets. No barriers to entry. Just scalable, smart software that grows with you.
+                  Instead of charging thousands before you see results, we offer a <span className="font-black text-4xl" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>revenue-sharing model</span>. We build and maintain a custom, results-driven web platform tailored to your business, and <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>we only succeed when you do</span>. No bloated budgets. No barriers to entry. Just scalable, smart software that grows with you.
                 </p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export default function About() {
                 }}
               >
                 <p className="text-5xl font-black leading-relaxed" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>
-                  🚀 Let's build something that <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>pays for itself</span> — and then some more! 🚀
+                  🚀 Let's build something that <span className="font-black" style={{ color: 'white', textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}>pays for itself</span> and then some more! 🚀
                 </p>
               </div>
             </div>

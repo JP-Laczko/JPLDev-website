@@ -1,4 +1,4 @@
-import { FaArrowRight, FaCode, FaRocket, FaDollarSign } from 'react-icons/fa';
+import { FaArrowRight, FaCode, FaRocket, FaDollarSign, FaChevronDown } from 'react-icons/fa';
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -142,6 +142,40 @@ export default function Hero() {
               </button>
             </div>
 
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="fixed top-1/2 transform -translate-y-1/2 z-50" style={{ left: '5px' }}>
+          <div 
+            className="flex flex-col items-center cursor-pointer"
+            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            style={{
+              animation: 'floatUpDown 3s ease-in-out infinite'
+            }}
+          >
+            <div className="text-white text-center mb-3" style={{
+              animation: 'fadeInOut 2s ease-in-out infinite alternate'
+            }}>
+              <p className="text-lg font-bold" style={{ 
+                textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+                writingMode: 'vertical-rl',
+                textOrientation: 'mixed'
+              }}>SCROLL</p>
+            </div>
+            <div className="flex flex-col items-center gap-1" style={{
+              animation: 'fadeInOut 2s ease-in-out infinite alternate'
+            }}>
+              <FaChevronDown className="text-white text-sm" style={{
+                textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+              }} />
+              <FaChevronDown className="text-white text-sm" style={{
+                textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+              }} />
+              <FaChevronDown className="text-white text-sm" style={{
+                textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+              }} />
+            </div>
           </div>
         </div>
         
