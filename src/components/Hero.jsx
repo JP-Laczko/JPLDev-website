@@ -1,6 +1,21 @@
 import { FaArrowRight, FaCode, FaRocket, FaDollarSign, FaChevronDown } from 'react-icons/fa';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Hero() {
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const portfolioButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      // Hide scroll indicator after scrolling just 10 pixels
+      setShowScrollIndicator(currentScroll < 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -93,7 +108,8 @@ export default function Hero() {
                   textAlign: 'center',
                   display: 'block',
                   fontSize: '24px',
-                  fontWeight: 'normal'
+                  fontWeight: 'normal',
+                  padding: '0 20px'
                 }}>
                   — not the kind you get from AI or web builders.
                 </span>
@@ -115,6 +131,7 @@ export default function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-6 mb-24 justify-center animate-slideInUp delay-300">
               <button 
+                ref={portfolioButtonRef}
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-primary flex items-center justify-center group text-xl px-10 py-4"
                 style={{
@@ -146,38 +163,50 @@ export default function Hero() {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="fixed top-1/2 transform -translate-y-1/2 z-50" style={{ left: '5px' }}>
-          <div 
-            className="flex flex-col items-center cursor-pointer"
-            onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            style={{
-              animation: 'floatUpDown 3s ease-in-out infinite'
-            }}
-          >
-            <div className="text-white text-center mb-3" style={{
-              animation: 'fadeInOut 2s ease-in-out infinite alternate'
-            }}>
-              <p className="text-lg font-bold" style={{ 
-                textShadow: '0 2px 4px rgba(0,0,0,0.8)',
-                writingMode: 'vertical-rl',
-                textOrientation: 'mixed'
-              }}>SCROLL</p>
-            </div>
-            <div className="flex flex-col items-center gap-1" style={{
-              animation: 'fadeInOut 2s ease-in-out infinite alternate'
-            }}>
-              <FaChevronDown className="text-white text-sm" style={{
-                textShadow: '0 2px 4px rgba(0,0,0,0.8)'
-              }} />
-              <FaChevronDown className="text-white text-sm" style={{
-                textShadow: '0 2px 4px rgba(0,0,0,0.8)'
-              }} />
-              <FaChevronDown className="text-white text-sm" style={{
-                textShadow: '0 2px 4px rgba(0,0,0,0.8)'
-              }} />
+        {showScrollIndicator && (
+          <div className="fixed top-1/2 transform -translate-y-1/2 z-50" style={{ left: '5px' }}>
+            <div 
+              className="flex flex-col cursor-pointer"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              style={{
+                animation: 'floatUpDown 3s ease-in-out infinite',
+                transition: 'opacity 0.3s ease-in-out',
+                alignItems: 'center'
+              }}
+            >
+              <div className="text-white" style={{
+                animation: 'fadeInOut 2s ease-in-out infinite alternate',
+                marginBottom: '8px',
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
+                <p className="text-lg font-bold" style={{ 
+                  textShadow: '0 2px 4px rgba(0,0,0,0.8)',
+                  writingMode: 'vertical-rl',
+                  textOrientation: 'mixed',
+                  margin: 0
+                }}>SCROLL</p>
+              </div>
+              <div style={{
+                animation: 'fadeInOut 2s ease-in-out infinite alternate',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '2px'
+              }}>
+                <FaChevronDown className="text-white text-sm" style={{
+                  textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+                }} />
+                <FaChevronDown className="text-white text-sm" style={{
+                  textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+                }} />
+                <FaChevronDown className="text-white text-sm" style={{
+                  textShadow: '0 2px 4px rgba(0,0,0,0.8)'
+                }} />
+              </div>
             </div>
           </div>
-        </div>
+        )}
         
       </div>
     </section>
